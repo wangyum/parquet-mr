@@ -185,7 +185,7 @@ class InternalParquetRecordReader<T> {
     reader.setRequestedSchema(requestedSchema);
     this.recordConverter = readSupport.prepareForRead(conf, fileMetadata, fileSchema, readContext);
     this.strictTypeChecking = options.isEnabled(STRICT_TYPE_CHECKING, true);
-    this.total = reader.getFilteredRecordCount();
+    this.total = reader.getRecordCount();
     this.unmaterializableRecordCounter = new UnmaterializableRecordCounter(options, total);
     this.filterRecords = options.useRecordFilter();
     LOG.info("RecordReader initialized will read a total of {} records.", total);
