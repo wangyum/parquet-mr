@@ -38,7 +38,7 @@ public class ParquetReadOptions {
   private static final boolean RECORD_FILTERING_ENABLED_DEFAULT = true;
   private static final boolean STATS_FILTERING_ENABLED_DEFAULT = true;
   private static final boolean DICTIONARY_FILTERING_ENABLED_DEFAULT = true;
-  private static final boolean COLUMN_INDEX_FILTERING_ENABLED_DEFAULT = true;
+  private static final boolean COLUMN_INDEX_FILTERING_ENABLED_DEFAULT = false;
   private static final int ALLOCATION_SIZE_DEFAULT = 8388608; // 8MB
   private static final boolean PAGE_VERIFY_CHECKSUM_ENABLED_DEFAULT = false;
 
