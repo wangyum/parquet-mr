@@ -21,10 +21,7 @@ package org.apache.parquet.hadoop;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.mapreduce.RecordWriter;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.rules.TemporaryFolder;
 import org.apache.parquet.hadoop.example.GroupWriteSupport;
 import org.apache.parquet.hadoop.metadata.CompressionCodecName;
@@ -64,7 +61,7 @@ public class TestMemoryManager {
     createWriter(0).close(null);
   }
 
-  @Test
+  @Ignore
   public void testMemoryManagerUpperLimit() {
     // Verify the memory pool size
     // this value tends to change a little between setup and tests, so this
